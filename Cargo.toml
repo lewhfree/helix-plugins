@@ -14,6 +14,7 @@ members = [
   "helix-parsec",
   "helix-stdx",
   "xtask",
+  "helix-plugin",
 ]
 
 default-members = [
