@@ -1740,6 +1740,15 @@ name = "markdown"
 source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-markdown", rev = "62516e8c78380e3b51d5b55727995d2c511436d8", subpath = "tree-sitter-markdown" }
 
 [[language]]
+name = "markdown-rustdoc"
+scope = "source.markdown-rustdoc"
+grammar = "markdown"
+injection-regex = "markdown-rustdoc"
+file-types = []
+indent = { tab-width = 2, unit = "  " }
+block-comment-tokens = { start = "<!--", end = "-->" }
+
+[[language]]
 name = "markdown.inline"
 scope = "source.markdown.inline"
 injection-regex = "markdown\\.inline"
@@ -2380,7 +2389,7 @@ source = { git = "https://github.com/metio/tree-sitter-ssh-client-config", rev =
 name = "scheme"
 scope = "source.scheme"
 injection-regex = "scheme"
-file-types = ["ss", "scm"]
+file-types = ["ss", "scm", "sld"]
 shebangs = ["scheme", "guile", "chicken"]
 comment-token = ";"
 indent = { tab-width = 2, unit = "  " }
@@ -4351,3 +4360,13 @@ file-types = [ { glob = "dunst/dunstrc" } ]
 [[grammar]]
 name = "dunstrc"
 source = { git = "https://github.com/rotmh/tree-sitter-dunstrc", rev = "9cb9d5cc51cf5e2a47bb2a0e2f2e519ff11c1431" }
+
+[[language]]
+name = "rustfmt"
+scope = "source.rustfmt"
+file-types = []
+injection-regex = "rustfmt"
+
+[[grammar]]
+name = "rustfmt"
+source = { git = "https://github.com/nik-rev/tree-sitter-rustfmt", rev = "d8e517d9aca1905261a378b25688e4500ae4dd22" }
